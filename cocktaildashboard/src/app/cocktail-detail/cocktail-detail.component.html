@@ -1,0 +1,67 @@
+<div *ngIf="cocktail">
+  <div class="cocktailDetailsHeaderFrame">
+    <h2 class="cocktailNameHeader">{{cocktail.strDrink}}</h2>
+  </div>
+  <div class="infoDetailsFrame">
+    <img src="{{cocktail.strDrinkThumb}}" class="cocktailInfoPicture">
+  </div>
+  <div class="infoDetailsFrame">
+    <div class="infoDetailsContent">
+      <p class="frameHeader">
+        Ingredients:
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient1)">
+        - {{cocktail.strIngredient1}}
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient2)">
+        - {{cocktail.strIngredient2}}
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient3)">
+        - {{cocktail.strIngredient3}}
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient4)">
+        - {{cocktail.strIngredient4}}
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient5)">
+        - {{cocktail.strIngredient5}}
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient6)">
+        - {{cocktail.strIngredient6}}
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient7)">
+        - {{cocktail.strIngredient7}}
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient8)">
+        - {{cocktail.strIngredient8}}
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient9)">
+        - {{cocktail.strIngredient9}}
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient10)">
+        - {{cocktail.strIngredient10}}
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient11)">
+        - {{cocktail.strIngredient11}}
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient12)">
+        - {{cocktail.strIngredient12}}
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient13)">
+        - {{cocktail.strIngredient13}}
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient14)">
+        - {{cocktail.strIngredient14}}
+      </p>
+      <p class="Ingredients" *ngIf="!isIngredientNull(cocktail.strIngredient15)">
+        - {{cocktail.strIngredient15}}
+      </p>
+    </div>
+
+  </div>
+  <div class="infoDetailsFrame">
+    <p class="infoDetailsContent">
+      {{cocktail.strInstructions}}
+    </p>
+  </div>
+
+</div>

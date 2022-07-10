@@ -1,0 +1,111 @@
+.flex_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cocktails{
+  color: grey;
+}
+
+button {
+  margin-left: 15px;
+}
+
+.cocktailInfoContainer{
+  display: flex;
+  gap: 15px;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  margin-top: 15px;
+  padding: 5px;
+  align-items: center;
+  filter: drop-shadow(0px 4px 4px #00000075);
+  cursor: pointer;
+}
+
+.cocktailPicture{
+  width: 45px;
+  border-radius: 30px;
+}
+
+.cocktailName{
+}
+.content{
+  position: relative;
+}
+
+.filterPopup{
+  background: #EFEFEF;
+  padding: 20px;
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: flex-start;
+  /*
+  filter: drop-shadow(0px 4px 4px #00000075);
+  */
+
+}
+
+.filterButton{
+  margin: 0;
+  width: min-content;
+  margin-top: 5px;
+}
+
+.roundFilterButton{
+  user-select: none;
+  cursor: pointer;
+  background-color: #EFEFEF;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 4px 4px #00000075);
+}
+
+.searchArea{
+  border-bottom: darkgray solid 2px;
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.searchIcon{
+  cursor: pointer;
+}
+
+.searchBox{
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 13pt;
+  width: 180px;
+}
+
+.dashBoardHeader{
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropDownFilter{
+  width: 200px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.filterErrorMessage{
+  color: red;
+}

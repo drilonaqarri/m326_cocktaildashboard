@@ -1,0 +1,72 @@
+<div class="dashBoardHeader">
+  <div class="searchArea">
+    <input id="name" class="searchBox" [(ngModel)]="searchBy" (keyup.enter)="searchCocktail()" placeholder="Find Cocktail" >
+    <span class="material-symbols-outlined searchIcon" (click)="searchCocktail()"> search
+  </span>
+    <!-- TODO when nothing is entered show all Cocktails -->
+
+  </div>
+  <div class="roundFilterButton">
+    <span class="material-symbols-outlined" (click)="filterClickedEvent()">
+      filter_alt  <!--TODO When Filter Button is clicked exchange filter icon with close icon-->
+    </span>
+  </div>
+</div>
+<div class="content">
+
+  <nav *ngFor="let cocktail of cocktails" class="cocktails">
+    <div class="cocktailInfoContainer" routerLink="/detail/{{cocktail.idDrink}}">
+      <img src="{{cocktail.strDrinkThumb}}" class="cocktailPicture">
+      <p class="cocktailName">
+        {{cocktail.strDrink}}
+      </p>
+    </div>
+  </nav>
+
+  <div class="flex_wrap filterPopup"
+  [class.collapsed]="!filterCollapsed">
+
+    <div>
+      <select class="dropDownFilter" name="drinkCategories" id="drinkCategories" [(ngModel)]="selectedCategory">
+        <option value="no_filter">Category</option>
+        <option value="{{category.strCategory}}" *ngFor="let category of drinkCategories">
+          {{category.strCategory}}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <select class="dropDownFilter" name="drinkGlasses" id="drinkGlasses" [(ngModel)]="selectedGlass">
+        <option value="no_filter">Glasses</option>
+        <option value="{{glass.strGlass}}" *ngFor="let glass of drinkGlasses">
+          {{glass.strGlass}}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <select class="dropDownFilter" name="drinkIngredients" id="drinkIngredients" [(ngModel)]="selectedIngredient">
+        <option value="no_filter">Ingredient</option>
+        <option value="{{ingredient.strIngredient1}}" *ngFor="let ingredient of drinkIngredients">
+          {{ingredient.strIngredient1}}
+        </option>
+      </select>
+    </div>
+
+    <div>
+      <select class="dropDownFilter" name="alcoholics" id="alcoholics" [(ngModel)]="selectedAlcoholic">
+        <option value="no_filter">Alcoholic</option>
+        <option value="{{alcoholis.strAlcoholic}}" *ngFor="let alcoholis of alcoholics">
+          {{alcoholis.strAlcoholic}}
+        </option>
+      </select>
+    </div><!--
+        TODO: FILTER
+    -->
+    <button class="filterButton" (click)="filterCocktails()">Filter</button>
+    <p class="filterErrorMessage" [class.collapsed]="!errorMessageShown">
+      You can only select one filter
+    </p>
+  </div>
+
+</div>
